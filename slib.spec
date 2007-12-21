@@ -8,6 +8,7 @@ BuildArch:    noarch
 Source0:      ftp://swissnet.ai.mit.edu/pub/scm/slib%{version}.tar.gz
 Patch1:       slib-3a4-guile.patch
 URL:          http://swissnet.ai.mit.edu/~jaffer/SLIB.html
+BuildRoot:    %{_tmppath}/%{name}-%{version}-%{release}-root
 Requires(post): info-install
 Requires(preun): info-install
 
