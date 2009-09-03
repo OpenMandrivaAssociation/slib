@@ -1,7 +1,7 @@
 Summary:      Platform independent library for scheme
 Name:         slib
 Version:      3a4
-Release:      %mkrel 3
+Release:      %mkrel 4
 License:      SLIB
 Group:        Development/Other
 BuildArch:    noarch
