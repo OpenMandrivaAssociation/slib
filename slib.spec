@@ -1,13 +1,12 @@
 Summary:      Platform independent library for scheme
 Name:         slib
-Version:      3a4
-Release:      %mkrel 4
+Version:      3b2
+Release:      %mkrel 1
 License:      SLIB
 Group:        Development/Other
 BuildArch:    noarch
-Source0:      ftp://swissnet.ai.mit.edu/pub/scm/slib%{version}.tar.gz
-Patch1:       slib-3a4-guile.patch
-URL:          http://swissnet.ai.mit.edu/~jaffer/SLIB.html
+Source0:      http://groups.csail.mit.edu/mac/ftpdir/scm/slib-%{version}.zip
+URL:          http://people.csail.mit.edu/jaffer/SLIB.html
 BuildRoot:    %{_tmppath}/%{name}-%{version}-%{release}-root
 Requires(post): info-install
 Requires(preun): info-install
@@ -22,13 +21,7 @@ implementation, user, or directory.
 
 %prep
 %setup -q -n %{name}
-%patch1 -p1 -b .guile
-for i in *; do
-  sed -e "s,/usr/local/lib,%{_datadir},g" \
-      -e "s,/usr/lib,%{_datadir},g" \
-      -e "s,/usr/local,/usr,g" < "${i}" > "${i}.tmp"
-  mv "${i}.tmp" "${i}"
-done
+sed -r -i "s,/usr/(local/)?lib/slib,%{_datadir}/slib,g" *.init
 
 %build
 
