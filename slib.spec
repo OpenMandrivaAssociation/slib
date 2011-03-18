@@ -1,7 +1,7 @@
 Summary:      Platform independent library for scheme
 Name:         slib
-Version:      3b2
-Release:      %mkrel 2
+Version:      3b3
+Release:      %mkrel 1
 License:      SLIB
 Group:        Development/Other
 BuildArch:    noarch
@@ -43,8 +43,6 @@ rm -rf ${RPM_BUILD_ROOT}
 
 %files
 %defattr(-,root,root)
-%dir %{_datadir}/slib
 %doc ANNOUNCE README COPYING FAQ ChangeLog
-%{_datadir}/slib/*
+%{_datadir}/slib
 %{_infodir}/slib.*
-
