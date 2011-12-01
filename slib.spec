@@ -26,14 +26,14 @@ sed -r -i "s,/usr/(local/)?lib/slib,%{_datadir}/slib,g" *.init
 %build
 
 %install
-rm -rf $RPM_BUILD_ROOT
-mkdir -p ${RPM_BUILD_ROOT}%{_datadir}/slib
-cp *.scm *.init *.xyz *.txt *.dat *.ps ${RPM_BUILD_ROOT}%{_datadir}/slib
-mkdir -p ${RPM_BUILD_ROOT}%{_infodir}
-install -m644 slib.info $RPM_BUILD_ROOT%{_infodir}
+rm -rf %{buildroot}
+mkdir -p %{buildroot}%{_datadir}/slib
+cp *.scm *.init *.xyz *.txt *.dat *.ps %{buildroot}%{_datadir}/slib
+mkdir -p %{buildroot}%{_infodir}
+install -m644 slib.info %{buildroot}%{_infodir}
 
 %clean
-rm -rf ${RPM_BUILD_ROOT}
+rm -rf %{buildroot}
 
 %post
 %_install_info slib.info
