@@ -1,15 +1,12 @@
-Summary:      Platform independent library for scheme
-Name:         slib
-Version:      3b3
-Release:      %mkrel 1
-License:      SLIB
-Group:        Development/Other
-BuildArch:    noarch
-Source0:      http://groups.csail.mit.edu/mac/ftpdir/scm/slib-%{version}.zip
-URL:          http://people.csail.mit.edu/jaffer/SLIB.html
-BuildRoot:    %{_tmppath}/%{name}-%{version}-%{release}-root
-Requires(post): info-install
-Requires(preun): info-install
+Summary:	Platform independent library for scheme
+Name:		slib
+Version:	3b3
+Release:	2
+License:	SLIB
+Group:		Development/Other
+URL:		http://people.csail.mit.edu/jaffer/SLIB.html
+Source0:	http://groups.csail.mit.edu/mac/ftpdir/scm/slib-%{version}.zip
+BuildArch:	noarch
 
 %description
 "SLIB" is a portable library for the programming language Scheme.
@@ -32,17 +29,7 @@ cp *.scm *.init *.xyz *.txt *.dat *.ps %{buildroot}%{_datadir}/slib
 mkdir -p %{buildroot}%{_infodir}
 install -m644 slib.info %{buildroot}%{_infodir}
 
-%clean
-rm -rf %{buildroot}
-
-%post
-%_install_info slib.info
-
-%preun
-%_remove_install_info slib.info
-
 %files
-%defattr(-,root,root)
 %doc ANNOUNCE README COPYING FAQ ChangeLog
 %{_datadir}/slib
 %{_infodir}/slib.*
