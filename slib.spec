@@ -1,12 +1,12 @@
-Summary:      Platform independent library for scheme
-Name:         slib
-Version:      3b4
-Release:      1
-License:      SLIB
-Group:        Development/Other
-BuildArch:    noarch
-Source0:      http://groups.csail.mit.edu/mac/ftpdir/scm/slib-%{version}.zip
-URL:          http://people.csail.mit.edu/jaffer/SLIB.html
+Summary:	Platform independent library for scheme
+Name:		slib
+Version:	3b5
+Release:	1
+License:	SLIB
+Group:		Development/Other
+BuildArch:	noarch
+Source0:	https://ftp.gnu.org/gnu/slib/%{name}-%{version}.tar.gz
+URL:		http://people.csail.mit.edu/jaffer/SLIB.html
 
 %description
 "SLIB" is a portable library for the programming language Scheme.
@@ -17,7 +17,7 @@ transparently extended to accommodate packages specific to a site,
 implementation, user, or directory.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 sed -r -i "s,/usr/(local/)?lib/slib,%{_datadir}/slib,g" *.init
 
 %build
