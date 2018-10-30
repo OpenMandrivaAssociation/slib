@@ -1,7 +1,7 @@
 Summary:	Platform independent library for scheme
 Name:		slib
 Version:	3b5
-Release:	2
+Release:	3
 License:	SLIB
 Group:		Development/Other
 BuildArch:	noarch
