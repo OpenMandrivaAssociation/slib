@@ -1,7 +1,7 @@
 Summary:	Platform independent library for scheme
 Name:		slib
-Version:	3b5
-Release:	3
+Version:	3b6
+Release:	1
 License:	SLIB
 Group:		Development/Other
 BuildArch:	noarch
@@ -17,7 +17,7 @@ transparently extended to accommodate packages specific to a site,
 implementation, user, or directory.
 
 %prep
-%setup -q
+%autosetup -p1
 sed -r -i "s,/usr/(local/)?lib/slib,%{_datadir}/slib,g" *.init
 
 %build
