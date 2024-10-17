@@ -6,7 +6,7 @@ License:	SLIB
 Group:		Development/Other
 BuildArch:	noarch
 Source0:	https://ftp.gnu.org/gnu/slib/%{name}-%{version}.tar.gz
-URL:		http://people.csail.mit.edu/jaffer/SLIB.html
+URL:		https://people.csail.mit.edu/jaffer/SLIB.html
 
 %description
 "SLIB" is a portable library for the programming language Scheme.
